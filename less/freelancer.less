@@ -74,8 +74,8 @@ hr.star-primary:after {
 
 header {
 	text-align: center;
-	background: @brand-success;
-	color: white;
+	color: @title;
+	border-bottom: 1px solid #D1F0F9;
 	.container {
 		padding-top: 100px;
 		padding-bottom: 50px;
@@ -83,9 +83,7 @@ header {
 	img.img-responsive {
 		display: block;
 		margin: 0 auto 20px;
-		width: 175px;
-		height: 175px;
-		border-radius: 220px;
+		width: 20%;
 	}
 	.intro-text {
 		.name {
@@ -103,7 +101,7 @@ header {
 			}
 		}
 		a {
-			color: #fff;
+			color: #07A8E6;
 			font-size: 1.5em;
 		}
 	}
@@ -126,8 +124,16 @@ header {
 	}
 }
 
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	background-color: @light-blue;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #2c3e50;
+}
+
 .navbar-brand {
 	padding: 13.5px 15px;
+	color: @title !important;
 }
 
 @media(min-width:768px) {
@@ -170,6 +176,7 @@ header {
 
 .navbar-default {
 	background-color: @brand-primary;
+	border-bottom: 1px solid @accents;
 	.navbar-inverse {
 		border: none;
 	}
@@ -180,6 +187,7 @@ header {
 
 section {
     padding: 100px 0;
+	border-bottom: 1px solid @accents;
     h2 {
     	margin: 0;
     	font-size: 3em;
@@ -196,7 +204,7 @@ section.success {
     a:focus,
     a:active,
     a.active {
-      color: @brand-primary;
+      color: @light-blue;
       outline: none;
     }
 }
@@ -338,6 +346,16 @@ form .row:first-child .floating-label-form-group {
     border-top: 1px solid @gray-lighter;
 }
 
+.btn-success {
+	background-color: #9AD8F0;
+	&:hover {
+		background-color: #07A8E6;
+	}
+	&:focus, &:active { 
+		background-color: #0C335D;
+	}
+}
+
 footer {
 	color: white;
 	h3 {
@@ -352,7 +370,9 @@ footer {
 	}
 	.footer-below {
 		padding: 25px 0;
-		background-color: darken(@brand-primary, 5%);
+		border-top: 1px solid @light-blue;
+		background-color: #fff;
+		color: #2c3e50;
 	}
 }
 
